@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!--Sintaxis: elemento entre paréntesis angulares, atributo entre comillas,= valor_-->
+<html lang="es">
+<head> <!--Todo lo que es esencial para que funcione pero entre bambalinas-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AppDeGatos</title>
+  <link href="/style.css" rel="stylesheet"><!--el atributo rel indica la relación elemento y su naturaleza-->
+
+</head>
+<body>
+  <h2>AppDeGatos</h2>
+  <main>
+    <h3>Imágenes de gatos</h3>
+    <p>Haz clic para ver más imágenes de gatos</p>
+    <!--Enlaces internos-->
+    <a href="#parrafo-1">Párrafo 1</a>
+    <a href="#parrafo-2">Párrafo 2</a>
+
+    <!-- chequear -->
+
+    <main>
+      <h3>Imágenes de gatos</h3>
+      <!--Enlaces internos-->
+      <a href="#parrafo-1">Párrafo 1</a>
+      <a href="#parrafo-2">Párrafo 2</a>
+         
+      <!--El atributo id asegura la unicidad del documento-->
+      <h3 id="parrafo-1">Párrafo 1</h3>
+      <p> Si eres un principiante, el desarrollo web puede ser un desafío: iremos de la mano y te brindaremos suficientes detalles para que te sientas cómodo y aprendas los temas correctamente. </p>
+  
+      <h3 id="parrafo-2">Párrafo 2</h3>   
+      <p lang="fr">Vous devriez vous sentir comme chez vous, que vous soyez un étudiant apprenant le développement Web (individuellement ou dans le cadre d'un cours), un enseignant à la recherche de matériel de cours, un amateur ou quelqu'un qui souhaite simplement en savoir plus sur son fonctionnement. ..</p>
+                  
+      <!--Texto enmascarando enlace externo
+      1.Target: abrir en ventan nueva
+      2.Evitar tabnabbing: rel="noopener norefferrer"-->
+    
+      <p>Haz clic aquí para ver más 
+      <a href="https://images.google.com" target="_blank" rel="noopener norefferrer">fotos de gatos</a></p>
+  
+      <!--Convertir una imagen en un enlace
+      1. encerrar la imagen con el elemento <a>
+      2. agregar el atributo href con el destino de la imagen, es decir la URL
+      3. agregr los atributos para nueva ventana y seguridad
+      4. Para indicar un enlace que no lleva a ningun parte, href="#" -->
+  
+        <a href="https://pixabay.com" target="_blank" rel="noopener norefferrer">
+        <img src="https://grupoyagu.com/wp-content/uploads/2021/11/Como-duermen-los-gatos-5-1024x683.png" alt="un lindo gatito descansando relajado"></a>
+        <img src="/img/lasana.jpg" alt="lasaña">
+    
+      <!--Crear una línea horizontal como separador visual, el formato va en CSS-->
+      <hr>    
+  
+      <!--Contenedores genéricos <div>
+      01. Sirve para organizar el código y aplicar CSS
+      -->
+  
+      <div>
+      <!--Crear listas ordenadas y no ordenadas. Incluye énfasis-->
+        <h3>Listas de gatos</h3>
+        <p>Cosas que los gatos <em>aman</em></p><!--Enfasis en itálica-->
+        <ul class="lista-de-gatos"> <!--Elemeto de lista no ordenada, con el atributo clase para el CSS-->
+          <li>Menta gatuna</li>
+          <li>Apuntadores láser</li>
+          <li><s>Lasagna</s></li><!--Palabra tachada-->
+        </ul>
+          
+        <p>Cosas que los gatos <strong>odian:</strong></p><!--Enfasis en negrita-->
+        <ol class="lista-de-gatos"><!--Elemento de lista ordenada: orderer list con el atributo clase-->
+          <li>Tratamiento antipulgas</li>
+          <li>Truenos</li>
+          <li>Otros gatos</li>
+        </ol>
+      </div>
+  
+      <!--Crear formulario
+        01. El atributo action con el valor del archivo redirecciona al archivo del formulario
+        02. El atributo type toma valor "text" para crear una caja de texto, "radio" para una opción única, y 
+        03. El atributo placeholder avisa al usuario qué debe escribir en la caja de texto
+        04. El atributo required indica que es obligatorio completar el campo del formulario            05. Grupo de botones de radio accesible: label for= e input id=
+        05. El atributo name asegura la unicidad de opción del grupo de botone
+        06. El elemento button crea un botón, en este caso, enviar
+        07. Salto de línea para separar elementos. Buena práctica: a continuación del cierre
+        08. Opciones por defecto: atributo checked en el elemento input
+        09. El atributo value indica al servidor qué se envia como respuesta del usuario
+        10. El elemento <label> es el único que tiene sólo un atributo: for
+        11. Buenas prácticas: usar la etiqueta <strong> y <em> sólo para enfatizar.           
+      -->
+  
+        <form action="/enviar-respuesta">
+        <!--Botones de radio-->
+          <label for="interior">
+            <input id="interior" type="radio" value="interior" name="interior-exterior" checked="">Interior
+          </label> <!--el valor de name incluye todas las opciones-->
+          <br><!--Salto de línea para que los grupos de botones estén uno debajo del otro-->
+  
+        <!--Selección única para el botón radio-->
+          <label for="exterior">
+            <input id="exterior" type="radio" value="exterior" name="interior-exterior">Exterior</label><br>
+        
+        <!--Casillas de verificación con selección múltiple-->
+          <label for="carinoso">
+          <input id="carinoso" value="carinoso" type="checkbox" name="personalidad" checked="">Cariñoso
+          </label>
+          <label for="perezoso">
+            <input id="perezoso" value="perezoso" type="checkbox" name="personalidad">Perezoso
+          </label>
+          <label for="energico">
+            <input id="energico" value="energico" type="checkbox" name="personalidad">Enérgico
+          </label><br>
+  
+        <!--Texto y botón enviar-->
+          <input type="text" placeholder="URL de la foto de tu gato" required="">
+           <button type="submit">Enviar</button>
+      </form>
+    </main>

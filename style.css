@@ -1,0 +1,39 @@
+/* Selectores de tipo: aplica estilo a todos los elementos html del mismo nombre. Sintaxis: nombreelemento*/
+h2 {/*selector asociado a una etiqueta html abre y cierra con llave*/
+  color: blue; /*nombre de la regla, dos puntos, contenido de la regla, punto y coma*/
+}
+/*por convención, se deja una línea en blanco entre reglas*/
+h3{/*Estilo color, un elemento, una regla*/
+  color:green;
+}
+p{
+color:blueviolet
+}
+
+h2{/*Un selector asociado a varias reglas*/
+  font-size: 25px;
+  font-family: Verdana;
+}
+h3{
+  font-size: 15px;
+}
+
+p, /*Varios elementos una regla*/
+ol,
+ul{
+  font-size: 20px;
+}
+
+li{ /*Un elemento varias reglas*/
+  color:blue;
+  font-size: 20;
+}
+
+
+/*Selector de clase: aplica a todos los atributos de una clase específica. Sintaxis: punto nombre de la clase*/
+.lista-de-gatos{ 
+  color:chocolate; /*Aplica este estilo a todas las etiquetas con este hombre de clase en el HTML*/
+  }
+
+
+/* Selector de id*/
